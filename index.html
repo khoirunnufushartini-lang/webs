@@ -10,44 +10,42 @@
     
     <div class="container">
         <h1>Daftar Menu Favorit</h1>
-        
         <div id="daftar-item" class="card-container">
-            </div>
+            <!-- Kartu akan dirender otomatis oleh JavaScript -->
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('daftar-item');
 
-            // Mengambil (fetch) data dari data.json
             fetch('data.json')
                 .then(response => response.json())
                 .then(data => {
-                    // data.items sesuai dengan nama array di file JSON
                     renderItems(data.items);
                 })
                 .catch(error => {
-                    console.error('Terjadi kesalahan saat memuat data:', error);
+                    console.error('Terjadi kesalahan:', error);
                     container.innerHTML = '<p style="color: white; text-align: center;">Gagal memuat data menu.</p>';
                 });
 
-            // Fungsi untuk membuat elemen HTML (kartu) untuk setiap item
             function renderItems(items) {
-                container.innerHTML = ''; // Kosongkan kontainer dulu
+                container.innerHTML = ''; 
                 
                 items.forEach(item => {
-                    // Membuat elemen div pembungkus kartu
                     const card = document.createElement('div');
                     card.className = 'card';
 
-                    // Memasukkan data JSON (nama, deskripsi, kategori) ke dalam HTML
+                    // Menambahkan tag <img> untuk memanggil gambar
                     card.innerHTML = `
-                        <h3>${item.nama}</h3>
-                        <p>${item.deskripsi}</p>
-                        <span class="kategori">${item.kategori}</span>
+                        <img src="${item.gambar}" alt="${item.nama}" class="card-img">
+                        <div class="card-content">
+                            <h3>${item.nama}</h3>
+                            <p>${item.deskripsi}</p>
+                            <span class="kategori">${item.kategori}</span>
+                        </div>
                     `;
                     
-                    // Tambahkan kartu ke dalam wadah utama
                     container.appendChild(card);
                 });
             }
