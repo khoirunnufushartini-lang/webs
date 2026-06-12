@@ -1,9 +1,9 @@
 {
     "items": [
-        {"nama": "Atomic Habits", "deskripsi": "Buku tentang kebiasaan kecil", "kategori": "Buku"},
-        {"nama": "Coffe Shop", "deskripsi": "Tempat nongkrong favorit", "kategori": "Tempat"},
-        {"nama": "Avengers Endgame", "deskripsi": "Film superhero terbaik", "kategori": "Film"},
-        {"nama": "Bakso", "deskripsi": "Makanan berkuah dengan pentol", "kategori": "Makanan"},
-        {"nama": "Mobile Legends", "deskripsi": "Game 5v5 seru", "kategori": "Game"}
+        {"nama": "Bakso", "deskripsi": "terbuat dari daging dan tepung, wenak cik", "kategori": "Buku"},
+        {"nama": "Mie Ayam", "deskripsi": "Mie dan ayam dicampur dengan kaldu rasanya enaknyoo", "kategori": "Tempat"},
+        {"nama": "Sate", "deskripsi": "Daging dibakar nih boss, apalagi pakai bumbu kacang", "kategori": "Film"},
+        {"nama": "Ayam Geprek", "deskripsi": "Makanan anak kampus", "kategori": "Makanan"},
+        {"nama": "Nasi Padang", "deskripsi": "COBAIN AJA dijamin ketagihan", "kategori": "Game"}
     ]
 }
